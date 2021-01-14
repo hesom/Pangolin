@@ -750,6 +750,8 @@ endif()
 #######################################################
 ## Install headers / targets
 
+set_target_properties(${LIBRARY_NAME} PROPERTIES DEBUG_POSTFIX d)
+
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/include/${LIBRARY_NAME}/config.h"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/${INSTALL_INCLUDE_DIR}/${LIBRARY_NAME}
 )
